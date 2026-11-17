@@ -36,7 +36,7 @@ async def test_project(dut):
     # Change it to match the actual expected output of your module:
     assert dut.uo_out[0].value == 1
 
-        dut.ui_in[0].value = 0
+    dut.ui_in[0].value = 0
     dut.ui_in[1].value = 1
     await ClockCycles(dut.clk, 25)
     assert dut.uo_out[0].value == 1
